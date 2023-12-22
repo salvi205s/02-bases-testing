@@ -6,43 +6,32 @@ Correr en Dev
 npm run dev
 ```
 
-Temas puntuales de la sección
+# Temas puntuales de la sección
 
-Package.json:
-Package.json: Es un archivo de configuración en proyectos de Node.js que describe el proyecto y sus dependencias. Contiene información como el nombre del proyecto, versión, scripts de ejecución, y las dependencias del proyecto.
+## Loggers y su necesidad:
+Loggers: En desarrollo de software, un logger es una herramienta que registra mensajes durante la ejecución de un programa. Estos mensajes pueden incluir información sobre eventos, errores, warnings, y otras operaciones relevantes. Los loggers son esenciales para el diagnóstico y la depuración de aplicaciones, ya que proporcionan una traza de lo que sucede durante la ejecución.
 
-Node Modules:
-Node Modules: Son bloques de código reutilizables en Node.js. Cada archivo de Node.js se considera un módulo, y los módulos pueden exportar e importar funciones, objetos o variables para ser utilizados en otros archivos.
+Necesidad de Loggers: Los loggers son cruciales para entender el comportamiento y el rendimiento de una aplicación. Ayudan a identificar problemas, rastrear la ejecución del código, y proporcionar información valiosa para la resolución de errores. Además, son útiles en entornos de producción para monitorizar la salud de la aplicación y diagnosticar problemas en tiempo real.
 
-Scripts:
-Scripts: En el contexto de package.json, los scripts son comandos predefinidos que pueden ejecutarse mediante el comando npm run. Estos scripts son configurados en la sección "scripts" de package.json y pueden utilizarse para realizar diversas tareas, como iniciar la aplicación, ejecutar pruebas, o realizar construcciones.
-Importaciones y Exportaciones:
-Importaciones y Exportaciones: En JavaScript (y en particular en ECMAScript 6 y versiones posteriores), las importaciones y exportaciones permiten la modularización del código. Puedes exportar funciones, objetos o variables de un módulo y luego importarlos en otro módulo.
+## Winston:
+Winston: Winston es una biblioteca para registro de eventos (logging) en Node.js. Es extremadamente flexible y configurable, lo que permite personalizar la salida de los registros, niveles de registro, y destinos de registro. Winston es ampliamente utilizado en proyectos Node.js para gestionar y registrar eventos.
 
-Módulos:
-Módulos: En el contexto de JavaScript, los módulos son piezas de código reutilizables que pueden ser importadas y utilizadas en otros archivos. Los módulos ayudan a organizar y modularizar el código.
-Reforzamiento de JS:
-Reforzamiento de JS: Se refiere a mejorar y fortalecer el conocimiento de JavaScript a través de la práctica y el estudio continuo. Esto puede incluir el aprendizaje de conceptos más avanzados, patrones de diseño, y buenas prácticas de programación en JavaScript.
+## Configuraciones básicas y adaptador:
+Configuraciones básicas: Configurar un logger con Winston implica especificar los detalles de cómo debe comportarse el logger. Esto puede incluir la elección del formato del registro, la configuración de niveles de registro (info, warn, error, etc.), y la configuración de los destinos de registro (consola, archivos, bases de datos, etc.).
 
-Callbacks:
-Callbacks: En JavaScript, un callback es una función que se pasa como argumento a otra función y se ejecuta después de que cierta operación ha finalizado. Es común en situaciones asíncronas, como la lectura de archivos o las solicitudes HTTP.
-Arrow Functions:
-Arrow Functions: Las funciones de flecha (=>) son una forma concisa de escribir funciones en JavaScript. Tienen una sintaxis más corta y lexico-scoping diferente en comparación con las funciones tradicionales.
-Factory Functions:
-Factory Functions: Son funciones que devuelven objetos. Estas funciones se utilizan para crear instancias de objetos con propiedades específicas y comportamientos compartidos.
+Adaptador: En el contexto de Winston, un adaptador se refiere a un transporte (transport) que maneja la salida de los registros. Los adaptadores pueden enviar registros a diferentes destinos como la consola, archivos, bases de datos, o servicios de terceros.
 
-Promises:
-Promises: En JavaScript, las Promesas son objetos que representan el resultado eventual de una operación asíncrona. Permiten trabajar con operaciones asíncronas de manera más estructurada y manejar casos de éxito o error.
+## TypeScript:
+TypeScript: TypeScript es un superset de JavaScript que añade tipado estático opcional y otros features a la sintaxis de JavaScript. Permite definir tipos de datos para variables, funciones y otros elementos del código, lo que facilita la detección de errores durante la fase de desarrollo.
 
-Async Await:
-Async Await: Es una característica de JavaScript introducida en ECMAScript 2017 que simplifica la escritura de código asíncrono. async se utiliza para declarar una función asincrónica, y await se utiliza para esperar a que una promesa se resuelva antes de continuar la ejecución.
-Peticiones Http básicas:
-Peticiones Http básicas: Hacer solicitudes HTTP básicas implica utilizar métodos como GET, POST, PUT, o DELETE para interactuar con recursos en un servidor. Esto se puede lograr en JavaScript mediante el uso de la API fetch o bibliotecas
-como Axios.
+## Configuración de TypeScript con Node:
+Configuración de TypeScript con Node: Para utilizar TypeScript en un proyecto Node.js, se necesita un archivo de configuración tsconfig.json que especifique cómo TypeScript debe compilar el código. Esto puede incluir la configuración de la versión de ECMAScript a la que se debe compilar, la ubicación de los archivos fuente y de salida, entre otros.
 
-Dependencias de Producción y Desarrollo:
-Dependencias de Producción y Desarrollo: En package.json, las dependencias de producción son las que son esenciales para la ejecución de la aplicación en un entorno de producción, mientras que las dependencias de desarrollo son aquellas necesarias solo durante el desarrollo, como herramientas de prueba o compiladores.
+## Migración de proyecto:
+Migración de proyecto: La migración de proyecto se refiere al proceso de trasladar un proyecto desde una versión anterior a una nueva, o de cambiar tecnologías, como migrar de JavaScript a TypeScript. Esto puede implicar modificar el código existente, actualizar dependencias, y ajustar la configuración para adaptarse a la nueva versión o tecnología.
 
-Patrón adaptador para nuestras dependencias:
-Patrón adaptador para nuestras dependencias: Se refiere al uso del patrón adaptador para hacer que dependencias con interfaces incompatibles trabajen juntas. El adaptador actúa como un intermediario que permite que la interfaz de una dependencia se adapte para ser compatible con otra interfaz. Esto es útil cuando se quiere integrar o utilizar bibliotecas o módulos que no tienen la misma interfaz que el resto del sistema.
+## TSC:
+TSC (TypeScript Compiler): TSC es la herramienta de línea de comandos que se utiliza para compilar proyectos TypeScript. Se ejecuta el comando tsc para compilar los archivos TypeScript y generar archivos JavaScript que puedan ser ejecutados por Node.js.
 
+## ts-node + nodemon:
+ts-node + nodemon: ts-node es un ejecutor TypeScript para Node.js que elimina la necesidad de compilar antes de ejecutar el código. nodemon es una herramienta que observa cambios en archivos y reinicia automáticamente la aplicación cuando detecta modificaciones. Combinar ts-node y nodemon facilita el desarrollo en entornos TypeScript, ya que permite reiniciar automáticamente la aplicación en respuesta a cambios en el código fuente sin necesidad de recompilación manual.
